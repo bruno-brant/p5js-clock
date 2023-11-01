@@ -1,0 +1,1 @@
+export type SColor = "white" | "red" | "black" | "silver" | "gray" | "grey" | "maroon" | "red" | "orange" | "yellow" | "olive" | "green" | "purple" | "magenta" | "blue" | "cyan" | "teal" | "navy" | "indigo" | "violet" | "pink" | "beige" | "brown";
