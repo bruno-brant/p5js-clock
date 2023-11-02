@@ -1,4 +1,4 @@
-import { WorldObject } from "./BaseObject";
+import { WorldObject } from "./World";
 
 export class DayDisplay extends WorldObject {
 	width: number;

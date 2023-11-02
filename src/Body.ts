@@ -1,5 +1,5 @@
 import p5 from 'p5';
-import { WorldObject } from './BaseObject';
+import { WorldObject } from './World';
 import { push } from './utilities';
 
 const d90 = Math.PI * 2 / 12;

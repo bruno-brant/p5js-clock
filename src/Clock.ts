@@ -1,4 +1,4 @@
-import { WorldObject } from './BaseObject';
+import { WorldObject } from './World';
 import { Hands } from './Hand';
 import { Body } from './Body';
 import { SideButton } from './SideButton';

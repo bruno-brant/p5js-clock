@@ -1,6 +1,6 @@
 import p5 from 'p5'
 import { Clock } from './Clock';
-import { World2d } from './BaseObject';
+import { World2d } from './World';
 
 const WIDTH = 500
 const HEIGHT = 500
