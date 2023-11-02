@@ -1,4 +1,4 @@
-import { WorldObject } from './World';
+import { WorldObject } from '../World';
 import { Hands } from './Hand';
 import { Body } from './Body';
 import { SideButton } from './SideButton';
@@ -12,8 +12,5 @@ export class Clock extends WorldObject {
       new DayDisplay(radius),
       new Hands(radius),
     );
-  }
-
-  public render(p: import("p5")): void {
   }
 }

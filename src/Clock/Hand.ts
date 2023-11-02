@@ -1,6 +1,6 @@
 import p5 from 'p5';
-import { WorldObject } from './World';
-import { SColor } from './Color';
+import { WorldObject } from '../World';
+import { SColor } from '../Color';
 
 abstract class Hand extends WorldObject {
   constructor(
@@ -30,7 +30,7 @@ class HourHand extends Hand {
 
   override getAngle() {
     const hours = new Date().getHours();
-    return -(Math.PI / 2) + (hours * Math.PI * 2 / 12);
+    return -(Math.PI / 2) + (hours * (Math.PI * 2) / 12);
   }
 }
 
@@ -41,7 +41,7 @@ class MinuteHand extends Hand {
 
   override getAngle() {
     const minutes = new Date().getMinutes();
-    return -(Math.PI / 2) + (minutes * Math.PI * 2 / 60);
+    return -(Math.PI / 2) + (minutes * (Math.PI * 2) / 60);
   }
 }
 
@@ -51,8 +51,8 @@ class SecondHand extends Hand {
   }
 
   override getAngle() {
-    const seconds = new Date().getSeconds();
-    return -(Math.PI / 2) + (seconds * Math.PI * 2 / 60);
+    const seconds = new Date().getSeconds() + new Date().getMilliseconds() / 1000;
+    return -(Math.PI / 2) + (seconds * (Math.PI * 2) / 60);
   }
 }
 

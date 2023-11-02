@@ -1,5 +1,5 @@
 import p5 from "p5";
-import { WorldObject } from "./World";
+import { WorldObject } from "../World";
 
 export class SideButton extends WorldObject {
 	private width: number;

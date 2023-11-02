@@ -1,6 +1,6 @@
 import p5 from 'p5';
-import { WorldObject } from './World';
-import { push } from './utilities';
+import { WorldObject } from '../World';
+import { push } from '../utilities';
 
 const d90 = Math.PI * 2 / 12;
 
@@ -17,7 +17,7 @@ export class Body extends WorldObject {
 
     // draw numbers
     p.strokeWeight(0);
-    p.fill("white");
+    p.fill("yellow");
     p.textSize(this.radius / 10);
     p.textAlign(p.CENTER, p.CENTER);
 
@@ -29,6 +29,17 @@ export class Body extends WorldObject {
 
         p.translate(x, y);
         p.text(i, 0, 0);
+      });
+    }
+
+    // Ticks
+    p.stroke("ice");
+    p.strokeWeight(this.radius / 100);
+    for(let i = 0; i < 60; i++) {
+      push(p, () => {
+        if (i % 5 === 0) return;
+        p.rotate(i * Math.PI * 2 / 60);
+        p.line(this.radius * .9, 0, this.radius * .95, 0);
       });
     }
   }
